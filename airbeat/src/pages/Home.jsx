@@ -9,6 +9,10 @@ import eventImage3 from '../assets/eventImage3.png';
 import eventImage4 from '../assets/eventImage4.png'; 
 import eventImage5 from '../assets/eventImage5.png'; 
 import eventImage6 from '../assets/eventImage6.png';
+import partnerImage1 from '../assets/sponsor1.png';
+import partnerImage2 from '../assets/sponsor2.png';
+import partnerImage3 from '../assets/sponsor3.png';
+
 
 function Home() {
     return (
@@ -169,7 +173,17 @@ function Home() {
                             View All Events
                         </a>
                     </div>
-
+                </div>
+            </div>
+            {/* Our Partners Section */}
+            <div className="w-full py-12 bg-gray-100 mt-12">
+                <div className="w-[80%] mx-auto text-center">
+                    <h2 className="text-3xl font-semibold mb-8">Our Partners</h2>
+                    <div className="flex justify-center gap-12">
+                        <img src={partnerImage1} alt="Partner 1" className="w-[150px] h-[150px] object-contain" />
+                        <img src={partnerImage2} alt="Partner 2" className="w-[150px] h-[150px] object-contain" />
+                        <img src={partnerImage3} alt="Partner 3" className="w-[150px] h-[150px] object-contain" />
+                    </div>
                 </div>
             </div>
         </div>
