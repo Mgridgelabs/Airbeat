@@ -1,12 +1,15 @@
 
 import React from 'react';
+import airbeat from '../assets/airbeat.png'
 
 function Navbar() {
     return (
         <nav className="navbar bg-white  p-4">
             <div className="container mx-auto flex justify-between items-center">
-                <div className="">Logo</div>
-                <div className="flex items-center gap-4">
+                <div className="w-[72px] h-[72px]">
+                    <img src={airbeat} alt="Logo" className="w-full h-full object-cover"/>
+                </div>
+                <div className="flex items-center gap-8">
                     <a href="#" className="text-primary-black hover:text">Home</a>
                     <a href="#" className="text-primary-black hover:text">Bio</a>
                     <a href="#" className="text-primary-black hover:text">Portfolio</a>
