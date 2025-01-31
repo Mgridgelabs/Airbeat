@@ -12,7 +12,6 @@ function Bio() {
         <div className="bg-white w-full flex flex-col items-center">
             {/* Full-width Top Border */}
             <div className="w-full border-t border-black mb-12"></div>
-
             {/* Content Section - Split into Left & Right */}
             <div className="w-[80%] flex justify-between items-start">
                 
@@ -25,14 +24,12 @@ function Bio() {
                             Know About Us
                         </h2>
                     </div>
-
                     {/* Large Heading (Font Size Increased) */}
                     <h3 className="text-black text-[40px] font-semibold leading-tight mb-4">
                         A successful event starts with the guest experience, 
                         that’s where we can help.
                     </h3>
                 </div>
-
                 {/* Right Section - Paragraph */}
                 <div className="w-[50%]">
                     <p className="text-black text-[20px] leading-[32px]">
@@ -41,7 +38,6 @@ function Bio() {
                     </p>
                 </div>
             </div>
-
             {/* Image with Play Icon Below Text */}
             <div className="w-full flex justify-center mt-12 relative">
                 <img
@@ -58,11 +54,9 @@ function Bio() {
                     />
                 </div>
             </div>
-
             {/* Bottom Black Section with Mission, Vision, and Values */}
             <div className="w-full h-full bg-black text-white py-12 mt-[-50px]">
                 <div className="w-[80%] mx-auto flex justify-between items-start">
-
                     {/* Mission - Left Aligned */}
                     <div className="w-[30%] text-left mt-10">
                         <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
@@ -70,7 +64,6 @@ function Bio() {
                             To continue creating unforgettable experiences to the masses in the entertainment scene in Kenya and beyond.
                         </p>
                     </div>
-
                     {/* Vision - Center Aligned */}
                     <div className="w-[30%] text-center mt-10">
                         <h2 className="text-3xl font-semibold mb-4">Our Vision</h2>
@@ -78,7 +71,6 @@ function Bio() {
                             To renovate the African entertainment scene as a whole.
                         </p>
                     </div>
-
                     {/* Values - Right Aligned */}
                     <div className="w-[30%] text-center mt-15">
                         <h2 className="text-3xl font-semibold mb-4">Our Values</h2>
@@ -89,10 +81,8 @@ function Bio() {
                             <li>Love</li>
                         </ul>
                     </div>
-
                 </div>
             </div>
-
             {/* Sponsors Section */}
             <div className="w-full bg-black py-12">
                 <div className="w-[80%] mx-auto text-left">
