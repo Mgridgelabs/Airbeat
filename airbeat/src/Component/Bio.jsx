@@ -1,7 +1,6 @@
 import React from 'react';
 import playIcon from '../assets/playicon.png'; 
 import yourImage from '../assets/bioimage.png';
-// Importing the sponsor logos
 import sponsor1 from '../assets/sponsor1.png';
 import sponsor2 from '../assets/sponsor2.png';
 import sponsor3 from '../assets/sponsor3.png';
