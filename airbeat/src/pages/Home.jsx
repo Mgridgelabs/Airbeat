@@ -3,6 +3,7 @@ import image3 from '../assets/image3.png';
 import image2 from '../assets/image2.png';
 import Navbar from "../Component/Navbar";
 import Hero from '../Component/Hero';
+import Footer from '../Component/Footer';
 import eventImage1 from '../assets/eventImage1.png';
 import eventImage2 from '../assets/eventImage2.png';
 import eventImage3 from '../assets/eventImage3.png';
@@ -34,7 +35,7 @@ function Home() {
             <Navbar />
             <Hero />
             {/* Section with Overlapping Image 2 and Image 3 */}
-            <div className="relative flex justify-between items-center mt-12 mb-20 w-full">
+            <div id="History" className="relative flex justify-between items-center mt-12 mb-20 w-full">
                 {/* Image 2 on the Left (Increased Size) */}
                 <div className="w-1/2 h-[700px] relative z-10">
                     <img src={image2} alt="image" className='absolute w-[650px] h-[700px] bottom-[-70px] left-[180px] rounded-lg' />
@@ -73,7 +74,7 @@ function Home() {
                 </div>
             </div>
             {/* Upcoming Events Section */}
-            <div className="w-full  py-12 mt-15">
+            <div id="ue" className="w-full  py-12 mt-15">
                 <div className="w-[80%] mx-auto">
                 {/* Heading and Dropdown Menus in a Flex Container */}
                 <div className="flex justify-between items-center mb-6">
@@ -249,7 +250,8 @@ function Home() {
                 </div>
             </div>
             {/* Summertides Section */}
-            <div className="w-full  py-12 px-12 flex flex-col items-center">
+            {/* <section id="summertides" className="py-20"> */}
+            <div id="summertides" className="w-full  py-12 px-12 flex flex-col items-center">
                 {/* Heading */}
                 <div className="text-center w-full mb-8">
                     <h2 className="text-4xl font-bold">Summertides</h2>
@@ -267,8 +269,9 @@ function Home() {
                     <img src={summertidesImage9} alt="Summertides" className="w-full h-auto rounded-lg shadow-lg" />
                 </div>
             </div>
+            {/* </section> */}
             {/* Airbeat Foundation Section */}
-            <div className="w-full py-12 px-12 mt-15">
+            <div id="foundation"className="w-full py-12 px-12 mt-15">
                 {/* Heading */}
                 <div className="text-center w-full mb-10">
                     <h2 className="text-4xl font-bold">Airbeat Foundation</h2>
@@ -285,7 +288,7 @@ function Home() {
                         />
                         {/* Overlapping Text Block */}
                         <div
-                            className="absolute top-[350px] left-[376px] w-[363px] h-[322px]  bg-white flex flex-col items-center justify-center rounded-lg shadow-md p-4 mr-5"
+                            className="absolute top-[350px]  left-[376px] w-[363px] h-[322px]  bg-white flex flex-col items-center justify-center rounded-lg shadow-md p-4 mr-5 "
                             style={{ borderColor: "rgba(0, 0, 0, 0.2)", borderWidth: "10px" }}
                         >
                             <ul className="list-disc size-10/12 text-gray-800 text-left space-y-1">
@@ -329,7 +332,7 @@ function Home() {
 
                 </div>
             </div>
-
+            <Footer />
         </div>
     );
 }

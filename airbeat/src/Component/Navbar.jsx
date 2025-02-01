@@ -10,12 +10,18 @@ function Navbar() {
                     <img src={airbeat} alt="Logo" className="w-full h-full object-cover"/>
                 </div>
                 <div className="flex items-center gap-8">
-                    <Link to="/" className="text-primary-black hover:text">Home</Link>
-                    <Link to="/bio" className="text-primary-black hover:text">Bio</Link> {/* Corrected Link */}
-                    <Link to="/portfolio" className="text-primary-black hover:text">Portfolio</Link>
-                    <Link to="/history" className="text-primary-black hover:text">History</Link>
-                    <Link to="/foundation" className="text-primary-black hover:text">AirBeat Foundation</Link>
-                    <a href="#" className="btn bg-black justify-center text-white hover:bg-gray-700 px-4 py-2 rounded-md">Explore Events</a>
+                    <Link to="/" className="text-black hover:text">Home</Link>
+                    <Link to="/bio" className="text-black hover:text">Bio</Link> 
+                    <a href="#summertides" className="text-black  hover:text-white text-sm font-medium transition duration-300 ease-in-out">
+                                Portfolio
+                            </a>
+                    <a href="#History" className="text-black hover:text-white text-sm font-medium transition duration-300 ease-in-out">
+                                History
+                            </a>
+                    <a href="#foundation" className="text-black hover:text-white text-sm font-medium transition duration-300 ease-in-out">
+                                Airbeat Foundation
+                            </a>
+                    <a href="#ue" className="btn bg-black justify-center text-white hover:bg-gray-700 px-4 py-2 rounded-md">Explore Events</a>
                 </div>
             </div>
         </nav>

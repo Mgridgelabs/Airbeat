@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/bio" element={<BioPage />} /> {/* Corrected path */}
+        <Route path="/bio" element={<BioPage />} /> 
         <Route path="*" element={<Navigate to="/" replace />} /> {/* Catch-all route */}
       </Routes>
     </Router>
