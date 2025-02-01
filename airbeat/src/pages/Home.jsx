@@ -27,9 +27,20 @@ import arrowIcon from '../assets/arrow.png';
 import ksh from '../assets/money.png';
 import loc from '../assets/location.png';
 import dat from '../assets/date.png';
+import TicketModal from '../Component/TicketModal';
 
 
-function Home() {
+
+
+const Homepage = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Function to open the modal
+    const openModal = () => setIsModalOpen(true);
+
+    // Function to close the modal
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className='bg-white text-black'>
             <Navbar />
@@ -76,42 +87,42 @@ function Home() {
             {/* Upcoming Events Section */}
             <div id="ue" className="w-full  py-12 mt-15">
                 <div className="w-[80%] mx-auto">
-                {/* Heading and Dropdown Menus in a Flex Container */}
-                <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-3xl font-semibold mb-6 text-left">Upcoming Events</h2>
-                    {/* Dropdown Menus Section */}
-                    <div className="flex space-x-4">
-                        {/* Date Dropdown */}
-                        <div className="w-[150px] ">
-                            <select id="date" className="w-full py-2 px-3 text-sm bg-[#67676733]  border border-gray-300 rounded-[50px]">
-                                <option value="" disabled selected>Yearly</option>
-                                <option value="today">Today</option>
-                                <option value="this-week">This Week</option>
-                                <option value="next-week">Next Week</option>
-                                <option value="this-month">This Month</option>
-                            </select>
+                    {/* Heading and Dropdown Menus in a Flex Container */}
+                    <div className="flex justify-between items-center mb-6">
+                        <h2 className="text-3xl font-semibold mb-6 text-left">Upcoming Events</h2>
+                        {/* Dropdown Menus Section */}
+                        <div className="flex space-x-4">
+                            {/* Date Dropdown */}
+                            <div className="w-[150px] ">
+                                <select id="date" className="w-full py-2 px-3 text-sm bg-[#67676733]  border border-gray-300 rounded-[50px]">
+                                    <option value="" disabled selected>Yearly</option>
+                                    <option value="today">Today</option>
+                                    <option value="this-week">This Week</option>
+                                    <option value="next-week">Next Week</option>
+                                    <option value="this-month">This Month</option>
+                                </select>
+                            </div>
+                            {/* Location Dropdown */}
+                            <div className="w-[150px]">
+                                <select id="location" className="w-full py-2 px-3 text-sm bg-[#67676733] border border-gray-300 rounded-[50px]">
+                                    <option value="" disabled selected>Location</option>
+                                    <option value="nyc">New York City</option>
+                                    <option value="la">Los Angeles</option>
+                                    <option value="sf">San Francisco</option>
+                                    <option value="chicago">Chicago</option>
+                                </select>
+                            </div>
+                            {/* Event Type Dropdown */}
+                            <div className="w-[150px]">
+                                <select id="event-type" className="w-full py-2 px-3 text-sm bg-[#6767672f]  border border-gray-300 rounded-[50px]">
+                                    <option value="" disabled selected>Event Type</option>
+                                    <option value="music">Music</option>
+                                    <option value="comedy">Comedy</option>
+                                    <option value="theater">Theater</option>
+                                    <option value="conference">Conference</option>
+                                </select>
+                            </div>
                         </div>
-                        {/* Location Dropdown */}
-                        <div className="w-[150px]">
-                            <select id="location" className="w-full py-2 px-3 text-sm bg-[#67676733] border border-gray-300 rounded-[50px]">
-                                <option value="" disabled selected>Location</option>
-                                <option value="nyc">New York City</option>
-                                <option value="la">Los Angeles</option>
-                                <option value="sf">San Francisco</option>
-                                <option value="chicago">Chicago</option>
-                            </select>
-                        </div>
-                        {/* Event Type Dropdown */}
-                        <div className="w-[150px]">
-                            <select id="event-type" className="w-full py-2 px-3 text-sm bg-[#6767672f]  border border-gray-300 rounded-[50px]">
-                                <option value="" disabled selected>Event Type</option>
-                                <option value="music">Music</option>
-                                <option value="comedy">Comedy</option>
-                                <option value="theater">Theater</option>
-                                <option value="conference">Conference</option>
-                            </select>
-                        </div>
-                    </div>
                     </div>
                     {/* Flexbox for Event Cards */}
                     <div className="flex flex-wrap justify-between gap-8">
@@ -120,7 +131,7 @@ function Home() {
                             <img src={eventImage1} alt="Event 1" className="w-full h-[200px] object-cover  mb-4" />
                             <h3 className="text-xl text-gray-400 font-semibold mb-4">Soul Ultimate Tour</h3>
                             <p className="text-lg text-gray-400  mb-2 flex items-center">
-                            <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
+                                <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 January 25, 2025</p>
                             <p className="text-sm text-gray-400 mb-2 flex items-center">
                                 <img src={loc} alt="Ksh" className="w-[16px]  mr-2" />
@@ -129,9 +140,9 @@ function Home() {
                                 <img src={ksh} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 Ksh. 20000/-</p>
                             <div className="text-center  mt-6 mb-3">
-                            <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
-                                Get Tickets
-                            </a>
+                                <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
+                                    Get Tickets
+                                </a>
                             </div>
                         </div>
                         {/* Event 2 */}
@@ -139,7 +150,7 @@ function Home() {
                             <img src={eventImage2} alt="Event 2" className="w-full h-[200px] object-cover  mb-4" />
                             <h3 className="text-xl text-gray-400 font-semibold mb-4">Soul Ultimate Tour</h3>
                             <p className="text-lg text-gray-400  mb-2 flex items-center">
-                            <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
+                                <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 January 25, 2025</p>
                             <p className="text-sm text-gray-400 mb-2 flex items-center">
                                 <img src={loc} alt="Ksh" className="w-[16px]  mr-2" />
@@ -148,9 +159,9 @@ function Home() {
                                 <img src={ksh} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 Ksh. 20000/-</p>
                             <div className="text-center  mt-6 mb-3">
-                            <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
-                                Get Tickets
-                            </a>
+                                <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
+                                    Get Tickets
+                                </a>
                             </div>
                         </div>
                         {/* Event 3 */}
@@ -158,7 +169,7 @@ function Home() {
                             <img src={eventImage3} alt="Event 3" className="w-full h-[200px] object-cover  mb-4" />
                             <h3 className="text-xl text-gray-400 font-semibold mb-4">Soul Ultimate Tour</h3>
                             <p className="text-lg text-gray-400  mb-2 flex items-center">
-                            <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
+                                <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 January 25, 2025</p>
                             <p className="text-sm text-gray-400 mb-2 flex items-center">
                                 <img src={loc} alt="Ksh" className="w-[16px]  mr-2" />
@@ -167,9 +178,9 @@ function Home() {
                                 <img src={ksh} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 Ksh. 20000/-</p>
                             <div className="text-center  mt-6 mb-3">
-                            <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
-                                Get Tickets
-                            </a>
+                                <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
+                                    Get Tickets
+                                </a>
                             </div>
                         </div>
                         {/* Event 4 */}
@@ -177,7 +188,7 @@ function Home() {
                             <img src={eventImage4} alt="Event 4" className="w-full h-[200px] object-cover  mb-4" />
                             <h3 className="text-xl text-gray-400 font-semibold mb-4">Soul Ultimate Tour</h3>
                             <p className="text-lg text-gray-400  mb-2 flex items-center">
-                            <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
+                                <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 January 25, 2025</p>
                             <p className="text-sm text-gray-400 mb-2 flex items-center">
                                 <img src={loc} alt="Ksh" className="w-[16px]  mr-2" />
@@ -186,9 +197,9 @@ function Home() {
                                 <img src={ksh} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 Ksh. 20000/-</p>
                             <div className="text-center  mt-6 mb-3">
-                            <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
-                                Get Tickets
-                            </a>
+                                <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
+                                    Get Tickets
+                                </a>
                             </div>
                         </div>
                         {/* Event 5 */}
@@ -196,7 +207,7 @@ function Home() {
                             <img src={eventImage5} alt="Event 5" className="w-full h-[200px] object-cover  mb-4" />
                             <h3 className="text-xl text-gray-400 font-semibold mb-4">Soul Ultimate Tour</h3>
                             <p className="text-lg text-gray-400  mb-2 flex items-center">
-                            <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
+                                <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 January 25, 2025</p>
                             <p className="text-sm text-gray-400 mb-2 flex items-center">
                                 <img src={loc} alt="Ksh" className="w-[16px]  mr-2" />
@@ -205,9 +216,9 @@ function Home() {
                                 <img src={ksh} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 Ksh. 20000/-</p>
                             <div className="text-center  mt-6 mb-3">
-                            <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
-                                Get Tickets
-                            </a>
+                                <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
+                                    Get Tickets
+                                </a>
                             </div>
                         </div>
                         {/* Event 6 */}
@@ -215,7 +226,7 @@ function Home() {
                             <img src={eventImage6} alt="Event 6" className="w-full h-[200px] object-cover  mb-4" />
                             <h3 className="text-xl text-gray-400 font-semibold mb-4">Soul Ultimate Tour</h3>
                             <p className="text-lg text-gray-400  mb-2 flex items-center">
-                            <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
+                                <img src={dat} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 January 25, 2025</p>
                             <p className="text-sm text-gray-400 mb-2 flex items-center">
                                 <img src={loc} alt="Ksh" className="w-[16px]  mr-2" />
@@ -224,9 +235,9 @@ function Home() {
                                 <img src={ksh} alt="Ksh" className="w-[16px] h-[16px] mr-2" />
                                 Ksh. 20000/-</p>
                             <div className="text-center  mt-6 mb-3">
-                            <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
-                                Get Tickets
-                            </a>
+                                <a href="#" className="bg-white font-bold text-black hover:bg-amber-200 px-20 py-3  ">
+                                    Get Tickets
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -271,7 +282,7 @@ function Home() {
             </div>
             {/* </section> */}
             {/* Airbeat Foundation Section */}
-            <div id="foundation"className="w-full py-12 px-12 mt-15">
+            <div id="foundation" className="w-full py-12 px-12 mt-15">
                 {/* Heading */}
                 <div className="text-center w-full mb-10">
                     <h2 className="text-4xl font-bold">Airbeat Foundation</h2>
